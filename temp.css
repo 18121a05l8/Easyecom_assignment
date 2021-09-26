@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    background-color: #111d4a;
+}
+
+* {
+    box-sizing: border-box;
+}
+h1 {
+    color: #eee;
+    margin-bottom: 30px;
+}
+#charactersList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 25px;
+}
+li:hover{
+    background-color: #34AB78;
+    display: inline-block;
+}
+
+.character {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr ;
+    grid-template-areas:
+        'name image'
+        'gender image'
+        'species image'
+        'location image';
+
+    text-align: left;
+}
+
+.character > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+}
+
+.character > p {
+    grid-area: house;
+    margin: 0;
+    margin-top: -18px;
+}
+
+.character > img {
+    max-height: 200px;
+    grid-area: image;
+}
+
+#searchBar {
+    width: 100%;
+    height: 32px;
+    border-radius: 5px;
+    border: 5px solid #eaeaea;
+    padding: 10px 10px;
+    font-size: 12px;
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+#searchWrapper::after {
+    content: '🔍';
+    position: absolute;
+    top: 7px;
+    right: 15px;
+}
+#load{
+    font-size: 20px;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    background-color: #4CAF50;
+      padding: 15px 32px;
+      border-radius: 30px;
+}
+#home{
+
+    font-size: 20px;
+    height: 50px;
+    width: 120px;
+    padding: 30px;
+    text-align: center;
+    background-color: #4CAF50;
+      padding: 15px 32px;
+      border-radius: 30px;
+}
+.drop{
+    align-self: right;
+    color: brown;
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 140px;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
